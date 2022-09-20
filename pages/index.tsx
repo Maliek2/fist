@@ -16,7 +16,7 @@ type HomeProps = {
 const Home: NextPage<HomeProps> = (props) => (
   <>
     <Layout
-      title="Welcome to AMP"
+      title="Welcome to AMP Tech"
       description="Learn how to build an AMP First with Next.js."
     >
       <main>
@@ -26,22 +26,22 @@ const Home: NextPage<HomeProps> = (props) => (
         </p>
 
         <section className="hero">
-          <a href="https://nextjs.org/learn/basics/getting-started">
-            <h3>Getting Started &rarr;</h3>
-            <p>Learn more about Next</p>
+          <a href="/learn/basics/getting-started">
+            <h3>Maliek News &rarr;</h3>
+            <p>Learn more about the Internet</p>
           </a>
           <a href="https://nextjs.org/docs/advanced-features/amp-support/introduction">
-            <h3>AMP Support in Next.js &rarr;</h3>
+            <h3>AMP Support in Your Blog;</h3>
             <p>Learn how to build AMP sites with Next.js</p>
           </a>
           <a href="https://amp.dev/documentation/components/?format=websites">
-            <h3>AMP Components &rarr;</h3>
+            <h3>AMP News &rarr;</h3>
             <p>See which components are available.</p>
           </a>
         </section>
 
         <section>
-          <h3>Using AMP Components</h3>
+          <h3>New AMP Components</h3>
           <p>
             You can import AMP components using <code>next/head</code>. Checkout{' '}
             <code>components/amp/AmpCustomElement</code> for a simple way to
@@ -74,10 +74,10 @@ const Home: NextPage<HomeProps> = (props) => (
         </section>
 
         <section>
-          <h3>amp-bind & amp-state</h3>
+          <h3>Don't Sell My Info </h3>
           <p>
-            It's no problem to use <code>amp-bind</code> and{' '}
-            <code>amp-state</code> with Next.js. There are two things to be
+            It's no problem to use <code>Amp-Bind</code> and{' '}
+            <code>Amp-State</code> with Maliek News. There are two things to be
             aware of:
             <ol>
               <li>
@@ -88,13 +88,18 @@ const Home: NextPage<HomeProps> = (props) => (
               <li>
                 Initializing <code>amp-state</code> via JSON string is not
                 supported in JSX:
-                <pre>{`<amp-state id="myState">
+                <pre>{`
+
+<amp-state id="myState">
   <script type="application/json">
     {
-      "message": "Hello World"
+      "message": "Please Follow Us On Facebook & Like Our Followers On The Web"
     }
   </script>
-</amp-state>`}</pre>
+</amp-state>
+
+
+`}</pre>
                 Instead you need to use <code>dangerouslySetInnerHTML</code> to
                 initialize the string. can use the{' '}
                 <code>/components/amp/AmpState.js</code> component to see how it
@@ -102,13 +107,13 @@ const Home: NextPage<HomeProps> = (props) => (
                 <code>amp-consent</code> as well
               </li>
             </ol>
-            Demo:
+            DONT SELL MY INFO
           </p>
 
           <AmpState id="myState">
             <>
               {{
-                message: 'Hello World',
+                message: 'NEVER SELL MY INFO,
               }}
             </>
           </AmpState>
@@ -117,13 +122,13 @@ const Home: NextPage<HomeProps> = (props) => (
            greeting: myState.message
          })"
           >
-            Click
+            Privacy
           </button>
           <span data-amp-bind-text="greeting" />
         </section>
 
         <section>
-          <h3>amp-list & amp-mustache</h3>
+          <h3>VueFront SPA</h3>
           <p>
             Mustache templates conflict with JSX and it's template literals need
             to be escaped. A simple approach is to escape them via back ticks:{' '}
@@ -149,10 +154,10 @@ const Home: NextPage<HomeProps> = (props) => (
         </section>
 
         <section>
-          <h3>amp-script</h3>
+          <h3>Maliek News App</h3>
           <p>
             Checkout the{' '}
-            <a href="https://amp.dev/documentation/components/amp-script/">
+            <a href="/documentation/components/amp-script/">
               amp-script
             </a>{' '}
             helper here: <code>components/amp/AmpScript.js</code> for embedding
@@ -163,12 +168,12 @@ const Home: NextPage<HomeProps> = (props) => (
             layout="container"
             src={`${props.host}/static/amp-script/hello.js`}
           >
-            <button>Hello amp-script!</button>
+            <button>Subscribe Now</button>
           </AmpScript>
 
           <p>
             The helper also supports embedding inline scripts. Good to know:
-            Next.js uses{' '}
+            MALIEK uses{' '}
             <a href="https://github.com/ampproject/amp-toolbox/tree/master/packages/optimizer">
               AMP Optimizer
             </a>{' '}
@@ -186,10 +191,10 @@ const Home: NextPage<HomeProps> = (props) => (
             script="
               const btn = document.querySelector('button');
               btn.addEventListener('click', () => {
-                document.body.textContent = 'Hello World!'
+                document.body.textContent = 'Accept Terms Of Conditions To Retrieve Your Privacy!'
               })"
           >
-            <button>Hello amp-script!</button>
+            <button>Privacy Policy</button>
           </AmpScript>
         </section>
       </main>
