@@ -1,0 +1,7 @@
+<!DOCTYPE html>
+<title>installing worker</title>
+<script type="text/javascript">
+  if ('serviceWorker' in navigator) {
+    navigator.serviceWorker.register('/worker.js')
+  }
+</script>
